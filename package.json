@@ -1,0 +1,9 @@
+{
+  "name": "libsql-dokploy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "jose": "^5.9.6"
+  }
+}

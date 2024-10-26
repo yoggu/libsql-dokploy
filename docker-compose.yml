@@ -1,0 +1,18 @@
+services:
+  db:
+    image: ghcr.io/tursodatabase/libsql-server:latest
+    platform: linux/amd64
+    ports:
+      - 8080
+      - 5001
+    environment:
+      - SQLD_NODE=primary
+      - SQLD_AUTH_JWT_KEY=gwRzUfl0BfmDdCWe9Y1tFkldeb7RCR91hCESk91uBu8
+    networks:
+      - dokploy-network
+    volumes:
+      - ../files/libsql:/var/lib/sqld
+
+networks:
+  dokploy-network:
+    external: true
