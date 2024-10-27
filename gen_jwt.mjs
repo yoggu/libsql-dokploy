@@ -16,7 +16,7 @@ import fs from "fs";
 
   fs.writeFileSync("jwt_key.base64", pubKeyBase64);
 
-  const exp = Math.floor(Date.now() / 1000) + 3 * 24 * 60 * 60; // 3 days in seconds
+  const exp = Math.floor(Date.now() / 1000) + 365 * 24 * 60 * 60;
 
   const token = await new SignJWT({ exp })
     .setProtectedHeader({ alg: "EdDSA" })
